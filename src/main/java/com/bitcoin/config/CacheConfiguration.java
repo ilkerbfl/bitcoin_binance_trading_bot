@@ -42,6 +42,11 @@ public class CacheConfiguration {
             cm.createCache(com.bitcoin.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.bitcoin.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(com.bitcoin.domain.SocialUserConnection.class.getName(), jcacheConfiguration);
+            cm.createCache(com.bitcoin.domain.GiveOrder.class.getName(), jcacheConfiguration);
+            cm.createCache(com.bitcoin.domain.CoinStrategy.class.getName(), jcacheConfiguration);
+            cm.createCache(com.bitcoin.domain.StrategyOfCoin.class.getName(), jcacheConfiguration);
+            cm.createCache(com.bitcoin.domain.NewOrderLocale.class.getName(), jcacheConfiguration);
+            cm.createCache(com.bitcoin.domain.CoinWillBeListened.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -1,0 +1,25 @@
+{
+    "bitcoinApp": {
+        "strategyOfCoin" : {
+            "home": {
+                "title": "Strategy Of Coins",
+                "createLabel": "Create a new Strategy Of Coin",
+                "createOrEditLabel": "Create or edit a Strategy Of Coin",
+                "search": "Search for Strategy Of Coin"
+            },
+            "created": "A new Strategy Of Coin is created with identifier {{ param }}",
+            "updated": "A Strategy Of Coin is updated with identifier {{ param }}",
+            "deleted": "A Strategy Of Coin is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Strategy Of Coin {{ id }}?"
+            },
+            "detail": {
+                "title": "Strategy Of Coin"
+            },
+            "quantity": "Quantity",
+            "sumValue": "Sum Value",
+            "coinName": "Coin Name",
+            "scale": "Scale"
+        }
+    }
+}

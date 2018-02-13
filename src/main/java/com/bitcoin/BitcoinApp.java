@@ -25,10 +25,11 @@ import java.util.Collection;
 @EnableAutoConfiguration(exclude = {MetricFilterAutoConfiguration.class, MetricRepositoryAutoConfiguration.class})
 @EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class})
 public class BitcoinApp {
-
     private static final Logger log = LoggerFactory.getLogger(BitcoinApp.class);
 
     private final Environment env;
+
+
 
     public BitcoinApp(Environment env) {
         this.env = env;

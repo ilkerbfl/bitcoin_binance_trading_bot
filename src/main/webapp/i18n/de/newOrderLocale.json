@@ -1,0 +1,32 @@
+{
+    "bitcoinApp": {
+        "newOrderLocale" : {
+            "home": {
+                "title": "New Order Locales",
+                "createLabel": "New Order Locale erstellen",
+                "createOrEditLabel": "New Order Locale erstellen oder bearbeiten",
+                "search": "Suche nach New Order Locale"
+            },
+            "created": "New Order Locale erstellt mit ID {{ param }}",
+            "updated": "New Order Locale aktualisiert mit ID {{ param }}",
+            "deleted": "New Order Locale gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll New Order Locale {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "New Order Locale"
+            },
+            "symbol": "Symbol",
+            "side": "Side",
+            "type": "Type",
+            "timeInForce": "Time In Force",
+            "quantity": "Quantity",
+            "price": "Price",
+            "newClientOrderId": "New Client Order Id",
+            "stopPrice": "Stop Price",
+            "icebergQty": "Iceberg Qty",
+            "recvWindow": "Recv Window",
+            "timestamp": "Timestamp"
+        }
+    }
+}

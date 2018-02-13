@@ -1,0 +1,24 @@
+{
+    "bitcoinApp": {
+        "giveOrder" : {
+            "home": {
+                "title": "Give Orders",
+                "createLabel": "Create a new Give Order",
+                "createOrEditLabel": "Create or edit a Give Order",
+                "search": "Search for Give Order"
+            },
+            "created": "A new Give Order is created with identifier {{ param }}",
+            "updated": "A Give Order is updated with identifier {{ param }}",
+            "deleted": "A Give Order is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Give Order {{ id }}?"
+            },
+            "detail": {
+                "title": "Give Order"
+            },
+            "quantity": "Quantity",
+            "price": "Price",
+            "percentOfBalance": "Percent Of Balance"
+        }
+    }
+}

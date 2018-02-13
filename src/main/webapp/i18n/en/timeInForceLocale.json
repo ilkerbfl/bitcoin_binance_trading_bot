@@ -1,0 +1,9 @@
+{
+    "bitcoinApp": {
+        "TimeInForceLocale" : {
+            "null": "",
+            "GTC": "GTC",
+            "IOC": "IOC"
+        }
+    }
+}

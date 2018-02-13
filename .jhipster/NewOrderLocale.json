@@ -1,0 +1,60 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "symbol",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "side",
+            "fieldType": "OrderSideLocale",
+            "fieldValues": "BUY,SELL"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "OrderTypeLocale",
+            "fieldValues": "LIMIT,MARKET,STOP_LOSS,STOP_LOSS_LIMIT,TAKE_PROFIT,TAKE_PROFIT_LIMIT,LIMIT_MAKER"
+        },
+        {
+            "fieldName": "timeInForce",
+            "fieldType": "TimeInForceLocale",
+            "fieldValues": "GTC,IOC"
+        },
+        {
+            "fieldName": "quantity",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "newClientOrderId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "stopPrice",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "icebergQty",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "recvWindow",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "timestamp",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20180120195118",
+    "entityTableName": "new_order_locale",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "mySuffix"
+}

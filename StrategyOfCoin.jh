@@ -1,0 +1,17 @@
+entity StrategyOfCoin {
+	quantity Integer,
+    sumValue BigDecimal,
+    coinName String,
+    scale Integer,
+}
+
+
+// Set pagination options
+paginate StrategyOfCoin with infinite-scroll
+
+
+
+// Set service options to all except few
+service all with serviceImpl 
+// Set an angular suffix
+angularSuffix * with mySuffix

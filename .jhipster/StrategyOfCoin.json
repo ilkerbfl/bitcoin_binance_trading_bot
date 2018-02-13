@@ -1,0 +1,29 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "quantity",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sumValue",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "coinName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "scale",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180120190109",
+    "entityTableName": "strategy_of_coin",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "mySuffix"
+}

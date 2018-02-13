@@ -1,0 +1,22 @@
+{
+    "bitcoinApp": {
+        "coinWillBeListened" : {
+            "home": {
+                "title": "Coin Will Be Listeneds",
+                "createLabel": "Create a new Coin Will Be Listened",
+                "createOrEditLabel": "Create or edit a Coin Will Be Listened",
+                "search": "Search for Coin Will Be Listened"
+            },
+            "created": "A new Coin Will Be Listened is created with identifier {{ param }}",
+            "updated": "A Coin Will Be Listened is updated with identifier {{ param }}",
+            "deleted": "A Coin Will Be Listened is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Coin Will Be Listened {{ id }}?"
+            },
+            "detail": {
+                "title": "Coin Will Be Listened"
+            },
+            "symbol": "Symbol"
+        }
+    }
+}

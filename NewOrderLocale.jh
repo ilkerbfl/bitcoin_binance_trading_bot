@@ -1,0 +1,45 @@
+
+
+entity NewOrderLocale{
+     symbol String ,
+     side OrderSideLocale ,
+     type OrderTypeLocale ,
+     timeInForce TimeInForceLocale ,
+     quantity String ,
+     price String ,
+     newClientOrderId String ,
+     stopPrice String ,
+     icebergQty String ,
+     recvWindow Long ,
+     timestamp Long ,
+}
+enum OrderSideLocale{
+	 BUY,
+    SELL
+}
+enum TimeInForceLocale{
+	 GTC,
+    IOC
+}
+enum OrderTypeLocale{
+	    LIMIT,
+    MARKET,
+    STOP_LOSS,
+    STOP_LOSS_LIMIT,
+    TAKE_PROFIT,
+    TAKE_PROFIT_LIMIT,
+    LIMIT_MAKER
+
+}
+
+
+// Set pagination options
+paginate NewOrderLocale with infinite-scroll
+
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl 
+// Set an angular suffix
+angularSuffix * with mySuffix

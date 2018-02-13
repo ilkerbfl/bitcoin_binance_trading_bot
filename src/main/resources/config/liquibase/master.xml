@@ -5,6 +5,10 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171221142743_added_entity_GiveOrder.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180120190109_added_entity_StrategyOfCoin.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180120195118_added_entity_NewOrderLocale.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180121135431_added_entity_CoinWillBeListened.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

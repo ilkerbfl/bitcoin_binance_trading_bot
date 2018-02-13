@@ -1,0 +1,65 @@
+
+<div *ngIf="newOrderLocale">
+    <h2><span jhiTranslate="bitcoinApp.newOrderLocale.detail.title">New Order Locale</span> {{newOrderLocale.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="bitcoinApp.newOrderLocale.symbol">Symbol</span></dt>
+        <dd>
+            <span>{{newOrderLocale.symbol}}</span>
+        </dd>
+        <dt><span jhiTranslate="bitcoinApp.newOrderLocale.side">Side</span></dt>
+        <dd>
+            <span jhiTranslate="{{'bitcoinApp.OrderSideLocale.' + newOrderLocale.side}}">{{newOrderLocale.side}}</span>
+        </dd>
+        <dt><span jhiTranslate="bitcoinApp.newOrderLocale.type">Type</span></dt>
+        <dd>
+            <span jhiTranslate="{{'bitcoinApp.OrderTypeLocale.' + newOrderLocale.type}}">{{newOrderLocale.type}}</span>
+        </dd>
+        <dt><span jhiTranslate="bitcoinApp.newOrderLocale.timeInForce">Time In Force</span></dt>
+        <dd>
+            <span jhiTranslate="{{'bitcoinApp.TimeInForceLocale.' + newOrderLocale.timeInForce}}">{{newOrderLocale.timeInForce}}</span>
+        </dd>
+        <dt><span jhiTranslate="bitcoinApp.newOrderLocale.quantity">Quantity</span></dt>
+        <dd>
+            <span>{{newOrderLocale.quantity}}</span>
+        </dd>
+        <dt><span jhiTranslate="bitcoinApp.newOrderLocale.price">Price</span></dt>
+        <dd>
+            <span>{{newOrderLocale.price}}</span>
+        </dd>
+        <dt><span jhiTranslate="bitcoinApp.newOrderLocale.newClientOrderId">New Client Order Id</span></dt>
+        <dd>
+            <span>{{newOrderLocale.newClientOrderId}}</span>
+        </dd>
+        <dt><span jhiTranslate="bitcoinApp.newOrderLocale.stopPrice">Stop Price</span></dt>
+        <dd>
+            <span>{{newOrderLocale.stopPrice}}</span>
+        </dd>
+        <dt><span jhiTranslate="bitcoinApp.newOrderLocale.icebergQty">Iceberg Qty</span></dt>
+        <dd>
+            <span>{{newOrderLocale.icebergQty}}</span>
+        </dd>
+        <dt><span jhiTranslate="bitcoinApp.newOrderLocale.recvWindow">Recv Window</span></dt>
+        <dd>
+            <span>{{newOrderLocale.recvWindow}}</span>
+        </dd>
+        <dt><span jhiTranslate="bitcoinApp.newOrderLocale.timestamp">Timestamp</span></dt>
+        <dd>
+            <span>{{newOrderLocale.timestamp}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'new-order-locale-my-suffix/'+ newOrderLocale.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,1 @@
+sleep 5  keydown  Shift_L  sleep 1  key F10  sleep 1  keyup Shift_L 

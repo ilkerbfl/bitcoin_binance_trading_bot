@@ -1,0 +1,9 @@
+{
+    "bitcoinApp": {
+        "OrderSideLocale" : {
+            "null": "",
+            "BUY": "BUY",
+            "SELL": "SELL"
+        }
+    }
+}

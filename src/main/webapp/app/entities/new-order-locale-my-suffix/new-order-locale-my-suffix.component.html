@@ -1,0 +1,89 @@
+<div>
+    <h2>
+        <span jhiTranslate="bitcoinApp.newOrderLocale.home.title">New Order Locales</span>
+        <button class="btn btn-primary float-right jh-create-entity create-new-order-locale-my-suffix" [routerLink]="['/', { outlets: { popup: ['new-order-locale-my-suffix-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span class="hidden-sm-down"  jhiTranslate="bitcoinApp.newOrderLocale.home.createLabel">
+            Create new New Order Locale
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="{{ 'bitcoinApp.newOrderLocale.home.search' | translate }}">
+                    <button class="input-group-addon btn btn-info" (click)="search(currentSearch)">
+                        <span class="fa fa-search"></span>
+                    </button>
+                    <button class="input-group-addon btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <span class="fa fa-trash-o"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="newOrderLocales">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="symbol"><span jhiTranslate="bitcoinApp.newOrderLocale.symbol">Symbol</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="side"><span jhiTranslate="bitcoinApp.newOrderLocale.side">Side</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="type"><span jhiTranslate="bitcoinApp.newOrderLocale.type">Type</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="timeInForce"><span jhiTranslate="bitcoinApp.newOrderLocale.timeInForce">Time In Force</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="quantity"><span jhiTranslate="bitcoinApp.newOrderLocale.quantity">Quantity</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="price"><span jhiTranslate="bitcoinApp.newOrderLocale.price">Price</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="newClientOrderId"><span jhiTranslate="bitcoinApp.newOrderLocale.newClientOrderId">New Client Order Id</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="stopPrice"><span jhiTranslate="bitcoinApp.newOrderLocale.stopPrice">Stop Price</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="icebergQty"><span jhiTranslate="bitcoinApp.newOrderLocale.icebergQty">Iceberg Qty</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="recvWindow"><span jhiTranslate="bitcoinApp.newOrderLocale.recvWindow">Recv Window</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="timestamp"><span jhiTranslate="bitcoinApp.newOrderLocale.timestamp">Timestamp</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
+            <tr *ngFor="let newOrderLocale of newOrderLocales ;trackBy: trackId">
+                <td><a [routerLink]="['../new-order-locale-my-suffix', newOrderLocale.id ]">{{newOrderLocale.id}}</a></td>
+                <td>{{newOrderLocale.symbol}}</td>
+                <td jhiTranslate="{{'bitcoinApp.OrderSideLocale.' + newOrderLocale.side}}">{{newOrderLocale.side}}</td>
+                <td jhiTranslate="{{'bitcoinApp.OrderTypeLocale.' + newOrderLocale.type}}">{{newOrderLocale.type}}</td>
+                <td jhiTranslate="{{'bitcoinApp.TimeInForceLocale.' + newOrderLocale.timeInForce}}">{{newOrderLocale.timeInForce}}</td>
+                <td>{{newOrderLocale.quantity}}</td>
+                <td>{{newOrderLocale.price}}</td>
+                <td>{{newOrderLocale.newClientOrderId}}</td>
+                <td>{{newOrderLocale.stopPrice}}</td>
+                <td>{{newOrderLocale.icebergQty}}</td>
+                <td>{{newOrderLocale.recvWindow}}</td>
+                <td>{{newOrderLocale.timestamp}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../new-order-locale-my-suffix', newOrderLocale.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'new-order-locale-my-suffix/'+ newOrderLocale.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'new-order-locale-my-suffix/'+ newOrderLocale.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -7,6 +7,10 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entities",
+                "giveOrderMySuffix": "Give Order",
+                "strategyOfCoinMySuffix": "Strategy Of Coin",
+                "newOrderLocaleMySuffix": "New Order Locale",
+                "coinWillBeListenedMySuffix": "Coin Will Be Listened",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

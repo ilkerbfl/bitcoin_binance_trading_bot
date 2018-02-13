@@ -21,15 +21,6 @@ spring:
         serialization.write_dates_as_timestamps: false
     cache:
         type: none
-    cloud:
-        stream:
-            kafka:
-                binder:
-                    brokers: localhost
-                    zk-nodes: localhost
-            bindings:
-                output:
-                    destination: topic-jhipster
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:h2:mem:bitcoin;DB_CLOSE_DELAY=-1
@@ -51,7 +42,7 @@ spring:
             hibernate.cache.use_second_level_cache: false
             hibernate.cache.use_query_cache: false
             hibernate.generate_statistics: true
-            hibernate.hbm2ddl.auto: validate
+            hibernate.hbm2ddl.auto: update
     data:
         elasticsearch:
             cluster-name:

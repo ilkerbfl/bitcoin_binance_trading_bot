@@ -17,7 +17,6 @@
     "devDatabaseType": "mysql",
     "prodDatabaseType": "mysql",
     "searchEngine": "elasticsearch",
-    "messageBroker": "kafka",
     "serviceDiscoveryType": false,
     "buildTool": "maven",
     "enableSocialSignIn": true,
@@ -35,6 +34,7 @@
       "tr",
       "en",
       "de"
-    ]
+    ],
+    "messageBroker": false
   }
 }

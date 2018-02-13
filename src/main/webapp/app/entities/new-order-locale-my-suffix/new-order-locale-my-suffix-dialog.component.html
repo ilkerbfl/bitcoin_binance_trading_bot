@@ -1,0 +1,91 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myNewOrderLocaleLabel" jhiTranslate="bitcoinApp.newOrderLocale.home.createOrEditLabel">Create or edit a New Order Locale</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!newOrderLocale.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="newOrderLocale.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bitcoinApp.newOrderLocale.symbol" for="field_symbol">Symbol</label>
+            <input type="text" class="form-control" name="symbol" id="field_symbol"
+                [(ngModel)]="newOrderLocale.symbol" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bitcoinApp.newOrderLocale.side" for="field_side">Side</label>
+            <select class="form-control" name="side" [(ngModel)]="newOrderLocale.side" id="field_side" >
+                <option value="BUY">{{'bitcoinApp.OrderSideLocale.BUY' | translate}}</option>
+                <option value="SELL">{{'bitcoinApp.OrderSideLocale.SELL' | translate}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bitcoinApp.newOrderLocale.type" for="field_type">Type</label>
+            <select class="form-control" name="type" [(ngModel)]="newOrderLocale.type" id="field_type" >
+                <option value="LIMIT">{{'bitcoinApp.OrderTypeLocale.LIMIT' | translate}}</option>
+                <option value="MARKET">{{'bitcoinApp.OrderTypeLocale.MARKET' | translate}}</option>
+                <option value="STOP_LOSS">{{'bitcoinApp.OrderTypeLocale.STOP_LOSS' | translate}}</option>
+                <option value="STOP_LOSS_LIMIT">{{'bitcoinApp.OrderTypeLocale.STOP_LOSS_LIMIT' | translate}}</option>
+                <option value="TAKE_PROFIT">{{'bitcoinApp.OrderTypeLocale.TAKE_PROFIT' | translate}}</option>
+                <option value="TAKE_PROFIT_LIMIT">{{'bitcoinApp.OrderTypeLocale.TAKE_PROFIT_LIMIT' | translate}}</option>
+                <option value="LIMIT_MAKER">{{'bitcoinApp.OrderTypeLocale.LIMIT_MAKER' | translate}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bitcoinApp.newOrderLocale.timeInForce" for="field_timeInForce">Time In Force</label>
+            <select class="form-control" name="timeInForce" [(ngModel)]="newOrderLocale.timeInForce" id="field_timeInForce" >
+                <option value="GTC">{{'bitcoinApp.TimeInForceLocale.GTC' | translate}}</option>
+                <option value="IOC">{{'bitcoinApp.TimeInForceLocale.IOC' | translate}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bitcoinApp.newOrderLocale.quantity" for="field_quantity">Quantity</label>
+            <input type="text" class="form-control" name="quantity" id="field_quantity"
+                [(ngModel)]="newOrderLocale.quantity" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bitcoinApp.newOrderLocale.price" for="field_price">Price</label>
+            <input type="text" class="form-control" name="price" id="field_price"
+                [(ngModel)]="newOrderLocale.price" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bitcoinApp.newOrderLocale.newClientOrderId" for="field_newClientOrderId">New Client Order Id</label>
+            <input type="text" class="form-control" name="newClientOrderId" id="field_newClientOrderId"
+                [(ngModel)]="newOrderLocale.newClientOrderId" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bitcoinApp.newOrderLocale.stopPrice" for="field_stopPrice">Stop Price</label>
+            <input type="text" class="form-control" name="stopPrice" id="field_stopPrice"
+                [(ngModel)]="newOrderLocale.stopPrice" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bitcoinApp.newOrderLocale.icebergQty" for="field_icebergQty">Iceberg Qty</label>
+            <input type="text" class="form-control" name="icebergQty" id="field_icebergQty"
+                [(ngModel)]="newOrderLocale.icebergQty" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bitcoinApp.newOrderLocale.recvWindow" for="field_recvWindow">Recv Window</label>
+            <input type="number" class="form-control" name="recvWindow" id="field_recvWindow"
+                [(ngModel)]="newOrderLocale.recvWindow" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bitcoinApp.newOrderLocale.timestamp" for="field_timestamp">Timestamp</label>
+            <input type="number" class="form-control" name="timestamp" id="field_timestamp"
+                [(ngModel)]="newOrderLocale.timestamp" />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

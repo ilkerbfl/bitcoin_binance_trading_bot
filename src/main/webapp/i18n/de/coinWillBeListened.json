@@ -1,0 +1,22 @@
+{
+    "bitcoinApp": {
+        "coinWillBeListened" : {
+            "home": {
+                "title": "Coin Will Be Listeneds",
+                "createLabel": "Coin Will Be Listened erstellen",
+                "createOrEditLabel": "Coin Will Be Listened erstellen oder bearbeiten",
+                "search": "Suche nach Coin Will Be Listened"
+            },
+            "created": "Coin Will Be Listened erstellt mit ID {{ param }}",
+            "updated": "Coin Will Be Listened aktualisiert mit ID {{ param }}",
+            "deleted": "Coin Will Be Listened gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Coin Will Be Listened {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Coin Will Be Listened"
+            },
+            "symbol": "Symbol"
+        }
+    }
+}

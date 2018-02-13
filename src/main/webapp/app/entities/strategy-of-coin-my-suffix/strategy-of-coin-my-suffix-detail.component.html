@@ -1,0 +1,37 @@
+
+<div *ngIf="strategyOfCoin">
+    <h2><span jhiTranslate="bitcoinApp.strategyOfCoin.detail.title">Strategy Of Coin</span> {{strategyOfCoin.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="bitcoinApp.strategyOfCoin.quantity">Quantity</span></dt>
+        <dd>
+            <span>{{strategyOfCoin.quantity}}</span>
+        </dd>
+        <dt><span jhiTranslate="bitcoinApp.strategyOfCoin.sumValue">Sum Value</span></dt>
+        <dd>
+            <span>{{strategyOfCoin.sumValue}}</span>
+        </dd>
+        <dt><span jhiTranslate="bitcoinApp.strategyOfCoin.coinName">Coin Name</span></dt>
+        <dd>
+            <span>{{strategyOfCoin.coinName}}</span>
+        </dd>
+        <dt><span jhiTranslate="bitcoinApp.strategyOfCoin.scale">Scale</span></dt>
+        <dd>
+            <span>{{strategyOfCoin.scale}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'strategy-of-coin-my-suffix/'+ strategyOfCoin.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

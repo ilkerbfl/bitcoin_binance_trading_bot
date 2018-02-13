@@ -1,0 +1,45 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myStrategyOfCoinLabel" jhiTranslate="bitcoinApp.strategyOfCoin.home.createOrEditLabel">Create or edit a Strategy Of Coin</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!strategyOfCoin.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="strategyOfCoin.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bitcoinApp.strategyOfCoin.quantity" for="field_quantity">Quantity</label>
+            <input type="number" class="form-control" name="quantity" id="field_quantity"
+                [(ngModel)]="strategyOfCoin.quantity" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bitcoinApp.strategyOfCoin.sumValue" for="field_sumValue">Sum Value</label>
+            <input type="number" class="form-control" name="sumValue" id="field_sumValue"
+                [(ngModel)]="strategyOfCoin.sumValue" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bitcoinApp.strategyOfCoin.coinName" for="field_coinName">Coin Name</label>
+            <input type="text" class="form-control" name="coinName" id="field_coinName"
+                [(ngModel)]="strategyOfCoin.coinName" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bitcoinApp.strategyOfCoin.scale" for="field_scale">Scale</label>
+            <input type="number" class="form-control" name="scale" id="field_scale"
+                [(ngModel)]="strategyOfCoin.scale" />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>
